@@ -16,7 +16,7 @@ const generateEmbedding = async (sourceType, source) => {
   });
 };
 
-// Controller to add data to the knowledge base
+// Function to add data to the knowledge base
 exports.addDataToKB = async (req, res) => {
   const { sourceType, source } = req.body;
 
@@ -29,7 +29,7 @@ exports.addDataToKB = async (req, res) => {
   }
 };
 
-// Controller to query the knowledge base
+// Fu to query the knowledge base
 exports.queryKB = async (req, res) => {
   const { query } = req.body;
 
