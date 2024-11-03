@@ -2,7 +2,7 @@ import sys
 from embedchain import App
 
 # Initialize the Embedchain app
-embedchain_app = App()
+embedchain_app = App.from_config(config_path="config.yaml")
 
 def generate_embedding(source_type, source):
     if source_type == 'text':
@@ -20,4 +20,5 @@ source = sys.argv[2]
 
 # Generate the embedding and print it as a response
 embedding = generate_embedding(source_type, source)
-print(embedding)
+response = embedchain_app.query(source)
+print(response)

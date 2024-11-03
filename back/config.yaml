@@ -1,0 +1,16 @@
+llm:
+  provider: google
+  config:
+    model: gemini-1.5-flash  
+    max_tokens: 1000          
+    temperature: 0.5          #randomness
+    top_p: 1                  
+    stream: false              # Set to true bro, if you want streaming responses
+    api_key: "AIzaSyBIi5-B03yNolwRaQeWzy4n-XFpSUdzJBo"  
+
+embedder:
+  provider: google
+  config:
+    model: 'models/embedding-001'  
+    task_type: "retrieval_document" 
+    title: "Embeddings for Embedchain" 
