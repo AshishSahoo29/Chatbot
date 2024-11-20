@@ -10,7 +10,7 @@ const indexName = 'chatbot-kb';
 exports.storeEmbedding = async (embedding, sourceType, source) => {
   try {
     const vectorData = {
-      id: `${Date.now()}`, // Unique ID for the vector
+      id: `${Date.now()}`, 
       values: embedding,
       metadata: {
         sourceType,
